@@ -1,0 +1,148 @@
+:root{
+    --redColor:hsl(0, 78%, 62%);
+    --cyanColor:hsl(180, 62%, 55%);
+    --orangeColor:hsl(34, 97%, 64%);
+    --blueColor:hsl(212, 86%, 64%);
+    --grayLight:hsl(0, 0%, 98%);
+    --grayishBlue:hsl(229, 6%, 66%);
+    --veryDarkBlue:hsl(234, 12%, 34%);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color: var(--grayLight);
+    min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 30px;
+}
+*{
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+h1{
+    color: var(--veryDarkBlue);
+    font-size: 40px;
+    text-align: center;
+}
+h1 span{
+    font-weight: 200;
+}
+
+.main-paragraph{
+    color: var(--grayishBlue);
+    max-width: 534px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.container .card{
+    background-color: white;
+    margin: 30px 0px;
+    padding: 30px;
+    border-top: solid 4px;
+    box-shadow: 1px 1px 18px 7px rgba(163, 165, 174, 0.198);
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    border-radius: 6px;
+    
+}
+.card h2{
+    font-size:20px ;
+    color: var(--veryDarkBlue);
+}
+.container .card div{
+    margin-top: 20px;
+}
+.card p{
+    color: var(--grayishBlue);
+    font-size: 13px;
+    font-weight: 400;
+    max-width: 270px;
+    width: 100%;
+}
+
+.container .card img{
+    width: 60px;
+    margin-left: auto;
+    display: block;
+}
+.card[data-color='cyan']{
+    border-top-color: var(--cyanColor);
+    
+}
+.card[data-color='red']{
+    border-top-color: var(--redColor);
+    
+}
+.card[data-color='orange']{
+    border-top-color: var(--orangeColor);
+    
+}
+.card[data-color='blue']{
+    border-top-color: var(--blueColor);
+    
+}
+.container >div{
+    width: calc(95% / 3);
+}
+@media (max-width:992px) {
+    .container{
+        flex-direction: column;
+    }
+   .container .card{
+    max-width: 440px;
+    width: 100%; 
+    margin:20px auto;
+  }
+    .container >div{
+        width: 100%;
+        
+    }
+    h1{
+        padding: 40px 1px;
+        font-size: 25px;
+    }
+    .card p{
+        width: 100%;
+    }
+     .main-paragraph{
+        max-width: 300px;
+        width: 100%;
+    }
+    
+}
